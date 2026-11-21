@@ -1,9 +1,16 @@
 [component]
 name = "SigmaOS-onlyoffice"
-description = "onlyoffice component"
-version = "0.1.0"
-tier = 4
+tier = 2
+stability = "beta"
+language = "shell"
+description = "SigmaOS integration for ONLYOFFICE editors: package management, config deployment, and CLI helpers."
+upstream = []
 
-[capabilities]
-contract_version = "1.0.0"
-principles = ["DRY", "KISS", "SOLID", "Arrange-Act-Assert", "Pristine-Sources", "Minimal-Kernel"]
+[contract]
+provides = ["app-manager:onlyoffice"]
+depends_on = []
+
+[maturity]
+status = "Implemented"
+test_evidence = "test.sh: syntax + metadata + isolated-HOME lifecycle checks"
+next_mestone = "Per-app config polish"
